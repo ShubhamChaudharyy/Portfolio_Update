@@ -1,0 +1,365 @@
+
+.col-lg-12{
+	padding-left: 20%;
+}
+body{
+	overflow-x: hidden;
+}
+.attenshow{
+	opacity: 1 !important;
+}
+.sidebar-visible{
+	width: 300px;
+	background-color: black;
+	margin-left: 0px;
+	height: 100vh;
+	position: fixed;
+	transition:all 0.3s ease-in-out;
+	overflow: hidden;
+}
+.sidebar{
+	margin-left: -300px;
+	width: 300px;
+	position: fixed;
+	height: 100vh;
+	overflow: hidden;
+	transition:all 0.3s ease-in-out;
+}
+.sidebar_menu{
+	position: fixed;
+	width: 350px;
+	
+	
+	overflow: hidden;
+	height: 100vh;
+	background-color: transparent;
+	max-height: 100vh;
+	opacity: 0.9;
+	transition:all 0.3s ease-in-out;
+	margin-left: -350px;
+
+
+
+}
+.hide_menu{
+	position: fixed;
+	width: 100%;
+	color: white;
+	margin-left: 0px;
+	overflow: hidden;
+	height: 100vh;
+	background-color:black;
+	max-height: 100vh;
+	opacity: 1;
+	background-color: #252627;
+	
+	transition:all 0.3s ease-in-out;
+	
+
+}
+.hide-fas{
+	opacity: 0;
+	transition: all 0.3s ease;
+}
+@keyframes upx{
+	from{
+	transform:translate3d(0,200px,0);
+	opacity: 0;
+
+
+	}
+ to{
+ 	transform: translate3d(0,0,0);
+    opacity: 1;
+ }
+}
+@keyframes rotatex{
+	from{
+	transform: rotate(0deg);
+
+	}
+ to{
+ 	transform: rotate(360deg);
+ }
+}
+@keyframes leftx{
+	from{
+	transform: translate3d(300,0,0);
+    opacity: 0;
+	}
+ to{
+ 	transform: translate3d(0,0,0);
+ 	opacity: 1;
+ }
+}
+#close{
+	animation: rotatex infinite ;
+	animation-delay: 0.2s;
+}
+.line {
+     
+      
+     
+      margin: 0 auto;
+      border-right: 2px solid rgba(255, 255, 255, 0.75);
+     
+      
+      white-space: nowrap;
+      overflow: hidden;
+      
+}
+
+/*Animation*/
+
+.anim-typewriter {
+
+      animation: typewriter 4s steps(190) 1s 1 normal both,
+      blinkTextCursor 500ms steps(190) 6 normal both;
+}
+
+@keyframes typewriter {
+      from {
+            width: 0;
+      }
+      to {
+            width: 20em;
+
+      }
+}
+
+@keyframes blinkTextCursor {
+      from {
+            border-right-color: rgba(255, 255, 255, 0.75);
+      }
+      to {
+            border-right-color: transparent;
+
+      }
+}
+.landing{
+	width: 100%;
+	height: 100vh;
+	justify-content: center;
+	display: flex;
+	font-weight: 100;
+	font-size: 65px;
+	font-family: 'Lato',sans-serif;
+
+}
+p{
+	font-weight: 100;
+	font-size: 65px;
+	font-family: 'Rubik',sans-serif;
+	animation: upx 1.5s ease;
+}
+body{
+    font-size: 1em;
+    background: url(/foggy-forest.jpeg);
+    background-size: cover;
+    font-family: monospace;
+}
+
+.sidebar{
+    width: 24em;
+    height: auto;
+   align-items: center;
+   display: flex;
+
+    font-size: 1.2em;
+    line-height: 2em;
+    color:#fff;
+    font-weight: 700;
+    text-transform:uppercase;
+    z-index: 999;
+
+    animation: show-hide 2s ease;
+
+    
+
+
+
+
+  
+  
+
+}
+
+.fa-times{
+	opacity: 0;
+	color: white;
+}
+.rotateX{
+	opacity: 1 !important;
+	color: white;
+	z-index: 999999999999999999999999;
+	animation: rotatex 1s ease;
+}
+.slideright{
+	opacity: 1 !important;
+	animation: slideright 1.5s ease;
+	
+
+}
+.slideleft{
+	opacity:1 !important;
+	animation: slideleft 1.5s ease-in-out;
+	
+
+}
+@keyframes slideright{
+	from{
+		transform: translateX(-70px);
+opacity: 0;
+	}
+	to{
+		transform: translateX(0);
+opacity: 1;
+	}
+}
+@keyframes slideleft{
+	from{
+		transform: translateX(70px);
+opacity: 0;
+	}
+	to{
+		transform: translateX(0);
+opacity: 1;
+	}
+}
+.col-lg-3{
+	background-color: white;
+	color:#252627;
+}
+@keyframes show-hide{
+	from{
+opacity: 0;
+	}
+	to{
+opacity: 1;
+	}
+}
+
+.sidebar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    
+}
+
+.sidebar ul li{
+  
+    background-color: #333;
+    height: 4em;
+    padding: 1em 1.5em;
+    position: relative;
+    transition: transform .5s;
+    width: 50em;
+    
+
+   
+
+}
+
+
+.sidebar ul li:nth-child(1){
+	animation: leftx 1s ease;
+    background-color: #607FB0;
+    animation-delay: 1s;
+}
+
+.sidebar ul li:nth-child(2){
+	animation: leftx 1.2s ease;
+    background-color: #E2403D;
+    animation-delay: 1.2s;
+
+}
+
+.sidebar ul li:nth-child(3){
+	animation: leftx 1.4s ease;
+    background-color: #53C3E5;
+     animation-delay: 1.4s;
+}
+
+.sidebar ul li:nth-child(4){
+	animation: leftx 1.6s ease;
+    background-color: #8F5950;
+     animation-delay: 1.6s;
+}
+
+.sidebar ul li:nth-child(5){
+	animation: leftx 1.8s ease;
+    background-color: #007BB3;
+     animation-delay: 1.8s;
+}
+
+.sidebar ul li:nth-child(6){
+	animation: leftx 2.0s ease;
+    background-color: #22CCEF;
+     animation-delay: 2.0s;
+}
+
+
+.sidebar ul li:hover{
+    transform: translateX(-3em);
+}
+
+
+.sidebar ul li a{
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+.sidebar ul li span{
+    display: block;
+    position: absolute;
+    top:0;
+    bottom:0;
+    font-size: 1em;
+    margin:0 auto;
+    line-height:2em;
+    padding:1em 1.5em;
+   
+}
+.first{
+opacity: 0;
+transition: 1s ease;
+}
+.second{
+opacity: 0;
+transition: 1s ease;
+}
+.close-over-other
+{
+	  width: 24em;
+    height: auto;
+   align-items: center;
+   display: flex;
+
+    font-size: 1.2em;
+    line-height: 2em;
+    color:#fff;
+    font-weight: 700;
+    text-transform:uppercase;
+    z-index: -1;
+}
+.col-shadow{
+	box-shadow: 1px 1px  50px 1px #e6e6e6 !important;
+    opacity: 1 !important;
+}
+.third{
+	opacity: 0;
+}
+.text{
+	opacity:0;
+}
+.text{
+	opacity:1;
+	color: black;
+	font-size: 20px;
+}
+.text-show{
+	opacity: 1.0 !important;
+}
