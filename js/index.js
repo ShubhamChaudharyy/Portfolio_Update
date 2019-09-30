@@ -1,14 +1,44 @@
 $(document).ready(function(){
-   
-     
+ 
+     $('.fa-globe-americas').addClass('rotate-para-x')
      
      	$('.far').click(function(){
+     		$('.l1').hover(function(){
+     			$('.under-1').addClass('under-1v');
+
+     		},
+     		function(){
+     			$('.under-1').removeClass('under-1v');
+     		});
+     		$('.l2').hover(function(){
+     			$('.under-2').addClass('under-2v');
+
+     		},
+     		function(){
+     			$('.under-2').removeClass('under-2v');
+     		});
+     		$('.l3').hover(function(){
+     			$('.under-3').addClass('under-3v');
+
+     		},
+     		function(){
+     			$('.under-3').removeClass('under-3v');
+     		});
+     		$('.l4').hover(function(){
+     			$('.under-4').addClass('under-4v');
+
+     		},
+     		function(){
+     			$('.under-4').removeClass('under-4v');
+     		});
+
      		
 		$('.sidebar_menu').addClass('hide_menu');
 		$(this).addClass('hide-fas');
 		$('.sidebar').addClass('close-over-other');
 		$('.first').addClass('slideright');
 		$('.fa-times').addClass('rotateX');
+
 		setTimeout(function(){
           $('.second').addClass('slideleft');
 		},900)

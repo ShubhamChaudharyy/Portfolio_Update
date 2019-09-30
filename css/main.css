@@ -2,8 +2,9 @@
 .col-lg-12{
 	padding-left: 20%;
 }
-body{
+.bg{
 	overflow-x: hidden;
+	transition: all 1s ease-in-out;
 }
 .attenshow{
 	opacity: 1 !important;
@@ -113,8 +114,8 @@ body{
 
 .anim-typewriter {
 
-      animation: typewriter 4s steps(190) 1s 1 normal both,
-      blinkTextCursor 500ms steps(190) 6 normal both;
+      animation: typewriter 4s steps(40) 2s 1 normal both,
+      blinkTextCursor 500ms steps(40) 6 normal both;
 }
 
 @keyframes typewriter {
@@ -122,7 +123,7 @@ body{
             width: 0;
       }
       to {
-            width: 20em;
+            width: 9em;
 
       }
 }
@@ -147,8 +148,8 @@ body{
 
 }
 p{
-	font-weight: 100;
-	font-size: 65px;
+	font-weight: 200;
+	font-size: 85px;
 	font-family: 'Rubik',sans-serif;
 	animation: upx 1.5s ease;
 }
@@ -183,6 +184,17 @@ body{
   
 
 }
+@keyframes visiblex{
+	from{
+		
+opacity: 0;
+	}
+	to{
+		
+opacity: 1;
+	}
+}
+
 
 .fa-times{
 	opacity: 0;
@@ -260,36 +272,68 @@ opacity: 1;
    
 
 }
+.under-1,.under-2,.under-3,.under-4{
+	opacity: 0;
+	width: 0;
+	border: 1px solid white;
+	transition: all 0.3 ease-in-out;
+
+}
+.under-1v,.under-2v,.under-3v,.under-4v{
+	animation: stretchx 0.3s ease-in-out;
+	border:1px solid white;
+	background-color: white;
+	opacity: 1.0 ;
+	transition: all 0.3s ease-in-out;
+	width: 60px;
+
+}
+li{
+	cursor: pointer;
+}
+
+@keyframes stretchx {
+from{
+  width: 0px;
+
+}
+to{
+width: 60px;
+}
+
+}
 
 
-.sidebar ul li:nth-child(1){
+.sidebar ul li:nth-child(1)
+{
 	animation: leftx 1s ease;
-    background-color: #607FB0;
+    
+    background-color:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
     animation-delay: 1s;
 }
 
 .sidebar ul li:nth-child(2){
 	animation: leftx 1.2s ease;
-    background-color: #E2403D;
+   background:linear-gradient(rgba(77, 84, 84,0.8),rgba(77, 84, 84,0.8));
     animation-delay: 1.2s;
 
 }
 
 .sidebar ul li:nth-child(3){
 	animation: leftx 1.4s ease;
-    background-color: #53C3E5;
+   background:linear-gradient(rgba(101, 102, 102,0.9),rgba(100, 102, 102,0.8));
      animation-delay: 1.4s;
 }
 
 .sidebar ul li:nth-child(4){
 	animation: leftx 1.6s ease;
-    background-color: #8F5950;
+    background:linear-gradient(rgba(66, 66, 66,0.9),rgba(66, 66, 66,0.7));
      animation-delay: 1.6s;
 }
 
 .sidebar ul li:nth-child(5){
 	animation: leftx 1.8s ease;
-    background-color: #007BB3;
+    background:linear-gradient(rgba(77, 84, 84,0.9),rgba(77, 84, 84,0.9));
      animation-delay: 1.8s;
 }
 
@@ -362,4 +406,25 @@ transition: 1s ease;
 }
 .text-show{
 	opacity: 1.0 !important;
+}
+.animate-body{
+	animation: body-bg 2s ease-in-out;
+}
+@keyframes body-bg{
+	from{
+transform: translateX(-90px);
+opacity: 0;
+
+	}
+	to{
+transform: translateX(0);	
+opacity: 1.0;
+}
+     
+}
+
+.rotate-para-x{
+ animation: rotatex 1s infinite;
+ z-index: 9999999999;
+ display: inline-block;
 }
