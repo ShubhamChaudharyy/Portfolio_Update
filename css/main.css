@@ -1,4 +1,16 @@
-
+body{
+	animation: load-animate 4s ease-in-out;
+}
+@keyframes load-animate{
+	from{
+       opacity: 0;
+       background-attachment: rotate(1deg);
+	}
+	to{
+  opacity: 1;
+  background-attachment: rotate(15deg);
+	}
+}
 .col-lg-12{
 	padding-left: 20%;
 }
@@ -9,21 +21,48 @@
 .attenshow{
 	opacity: 1 !important;
 }
+
+.new{
+	opacity: 0;
+}
+.change1{
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+	animation: infiniteload 1s ease-in-out;
+}
+@keyframes infiniteload{
+	from{
+	transform: translate3d(0,200px,0);
+
+
+	}
+	to{
+
+	transform: translate3d(0,0,0);
+	}
+}
+.col-lg-6{
+	cursor: pointer;
+}
+.col-lg-3{
+	cursor: pointer;
+}
+
 .sidebar-visible{
 	width: 300px;
 	background-color: black;
 	margin-left: 0px;
-	height: 100vh;
+	
 	position: fixed;
 	transition:all 0.3s ease-in-out;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 .sidebar{
 	margin-left: -300px;
 	width: 300px;
 	position: fixed;
-	height: 100vh;
-	overflow: hidden;
+	
+	overflow-x: hidden;
 	transition:all 0.3s ease-in-out;
 }
 .sidebar_menu{
@@ -31,13 +70,13 @@
 	width: 350px;
 	
 	
-	overflow: hidden;
-	height: 100vh;
+	
+	
 	background-color: transparent;
-	max-height: 100vh;
+	
 	opacity: 0.9;
 	transition:all 0.3s ease-in-out;
-	margin-left: -350px;
+	margin-left: -370px;
 
 
 
@@ -47,7 +86,7 @@
 	width: 100%;
 	color: white;
 	margin-left: 0px;
-	overflow: hidden;
+	overflow-x: hidden;
 	height: 100vh;
 	background-color:black;
 	max-height: 100vh;
@@ -97,26 +136,10 @@
 	animation: rotatex infinite ;
 	animation-delay: 0.2s;
 }
-.line {
-     
-      
-     
-      margin: 0 auto;
-      border-right: 2px solid rgba(255, 255, 255, 0.75);
-     
-      
-      white-space: nowrap;
-      overflow: hidden;
-      
-}
+
 
 /*Animation*/
-
-.anim-typewriter {
-
-      animation: typewriter 4s steps(40) 2s 1 normal both,
-      blinkTextCursor 500ms steps(40) 6 normal both;
-}
+.new
 
 @keyframes typewriter {
       from {
@@ -128,15 +151,7 @@
       }
 }
 
-@keyframes blinkTextCursor {
-      from {
-            border-right-color: rgba(255, 255, 255, 0.75);
-      }
-      to {
-            border-right-color: transparent;
 
-      }
-}
 .landing{
 	width: 100%;
 	height: 100vh;
@@ -204,7 +219,7 @@ opacity: 1;
 	opacity: 1 !important;
 	color: white;
 	z-index: 999999999999999999999999;
-	animation: rotatex 1s ease;
+	animation: rotatex 2s ease;
 }
 .slideright{
 	opacity: 1 !important;
@@ -216,6 +231,18 @@ opacity: 1;
 	opacity:1 !important;
 	animation: slideleft 1.5s ease-in-out;
 	
+
+}
+@keyframes slideleft
+{
+	from{
+		transform: translateX(-70px);
+opacity: 0;
+	}
+	to{
+		transform: translateX(0);
+opacity: 1;
+	}
 
 }
 @keyframes slideright{
@@ -280,7 +307,7 @@ opacity: 1;
 
 }
 .under-1v,.under-2v,.under-3v,.under-4v{
-	animation: stretchx 0.3s ease-in-out;
+	animation: stretchx 0.25s ease-in-out;
 	border:1px solid white;
 	background-color: white;
 	opacity: 1.0 ;
@@ -422,9 +449,47 @@ opacity: 1.0;
 }
      
 }
-
+.line{
+	font-size: 80px;
+	line-height: 100px;
+}
+.child-heading{
+	font-size: 70px;
+}
 .rotate-para-x{
  animation: rotatex 1s infinite;
  z-index: 9999999999;
  display: inline-block;
 }
+@media screen and (max-width: 500px)
+{
+	.line{
+		font-size: 45px;
+		font-weight: 100;
+		line-height:48px;
+		
+	}
+	.child-heading{
+		font-size: 32px;
+	
+		padding: 7px 0px;
+	}
+	.first{
+		padding: 0px 50px;
+	}
+	.second{
+		padding: 0px 50px;
+	}
+	.third{
+		padding: 0px 50px;
+	}
+	.fa{
+		font-size: 0.1em;
+	}
+	.fa-times{
+		font-size: 0.1em;
+	}
+	
+}
+
+
